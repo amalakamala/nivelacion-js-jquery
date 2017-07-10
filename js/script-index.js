@@ -65,7 +65,7 @@ function renderRecipe(recipe) {
 * Función que se encarga de pintar todas las actividades
 */
 function renderActivities(activitiesArray) {
-	console.log('Activities: ', activitiesArray);
+	//console.log('Activities: ', activitiesArray);
 	activitiesArray.forEach(function(e){
 		renderActivity(e);
 	})
@@ -88,7 +88,7 @@ function renderActivity(recipe){
 		    		<img src="` + recipe.userAvatar + `" class="image-avatar">
 		    	</span> 
 		   		<span class="meta">
-		      		<span class="author">` + recipe.userName + `</span>
+		      		<span class="author">` + recipe.userName + `</span> made 
 		     		<span class="recipe">` + recipe.recipeName + `</span>` + recipe.text + `
 		      		<span class="location">` + recipe.place + `</span>
 		    	</span>
