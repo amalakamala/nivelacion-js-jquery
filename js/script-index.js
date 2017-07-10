@@ -16,7 +16,7 @@ $(document).ready( function(){
 
 });
 
-
+/* function Etapa 2*/
 function printNews(){
 	$("p").text('NUEVAS RECETAS');
 }
@@ -26,7 +26,13 @@ function printNews(){
 * marcado el atributo "highlighted" como TRUE
 */
 function renderHighlightedRecipes(recipesArray) {
-	console.log('Recipes: ', recipesArray);
+	//console.log('Recipes: ', recipesArray);
+	recipesArray.forEach(function(e){
+		if (e.highlighted == true){
+			console.log(e);
+			renderRecipe(e);
+		}
+	})
 }
 
 /*
@@ -37,6 +43,7 @@ function renderHighlightedRecipes(recipesArray) {
 */
 function renderRecipe(recipe) {
 	console.log('Voy a pintar la receta: ', recipe);
+
 }
 
 
