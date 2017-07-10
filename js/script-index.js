@@ -14,6 +14,7 @@ $(document).ready( function(){
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 
+
 });
 
 /* function Etapa 2*/
@@ -29,7 +30,7 @@ function renderHighlightedRecipes(recipesArray) {
 	//console.log('Recipes: ', recipesArray);
 	recipesArray.forEach(function(e){
 		if (e.highlighted == true){
-			console.log(e);
+			//console.log(e);
 			renderRecipe(e);
 		}
 	})
@@ -58,6 +59,7 @@ function renderRecipe(recipe) {
   			<img src="img/recipes/320x350/`+ recipe.name +`.jpg" />
 		</a>
 		`)
+	renderActivities(activitiesArray);
 }
 
 
@@ -66,15 +68,11 @@ function renderRecipe(recipe) {
 */
 function renderActivities(activitiesArray) {
 	console.log('Activities: ', activitiesArray);
-	/*
-	activitiesArray.forEach(function(e){
-		if(e.length > 0 ){
-			return e;
-		}
-	})
-	*/
-
+	if(activitiesArray.length > 0){
+		$(".wrapper-message").hide();
+	}
 }
+
 
 /*
 * Función que se encarga de pintar una actividad
