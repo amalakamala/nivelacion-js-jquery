@@ -42,7 +42,7 @@ function renderHighlightedRecipes(recipesArray) {
 * archivo "templates/templates-recipe.html"
 */
 function renderRecipe(recipe) {
-	console.log('Voy a pintar la receta: ', recipe);
+	//console.log('Voy a pintar la receta: ', recipe);
 	$(".list-recipes").append(`
 		<a class="item-recipe" href="#">
   			<span class="attribution">
@@ -55,11 +55,10 @@ function renderRecipe(recipe) {
     			</span>
   			</span>
 
-  			<img src="img/recipes/320x350/spring-fromage-fort.jpg" />
+  			<img src="img/recipes/320x350/`+ recipe.name +`.jpg" />
 		</a>
 		`)
 }
-
 
 
 /*
@@ -67,6 +66,14 @@ function renderRecipe(recipe) {
 */
 function renderActivities(activitiesArray) {
 	console.log('Activities: ', activitiesArray);
+	/*
+	activitiesArray.forEach(function(e){
+		if(e.length > 0 ){
+			return e;
+		}
+	})
+	*/
+
 }
 
 /*
@@ -74,8 +81,8 @@ function renderActivities(activitiesArray) {
 * Aqui se tiene que crear el HTML que esta en el 
 * archivo "templates/templates-activity.html"
 */
-function renderActivity(recipe) {
-	
+function renderActivity(recipe){
+
 }
 
 
