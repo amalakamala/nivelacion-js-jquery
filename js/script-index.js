@@ -5,12 +5,21 @@ $(document).ready( function(){
 	$("#js-back-index").hide();
 	$("#js-menu-recipe").hide();
 
+	/*ETAPA 2
+	Hide según corresponda
+	*/
+	$(".callout-news").append(printNews());
+
 
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 
 });
 
+
+function printNews(){
+	$("p").text('NUEVAS RECETAS');
+}
 
 /*
 * Función que se encarga de pintar TODAS las recetas que tengan 
